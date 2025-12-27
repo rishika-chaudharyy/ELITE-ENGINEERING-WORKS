@@ -50,18 +50,26 @@ export default function IntroScreen() {
         transition={{ duration: 1.2, ease: "easeOut" }}
         whileHover={{ scale: 1.04 }}
       >
-        <img
-          src={logo}
-          alt="Elite Engineering Works"
+        <div
           className="
-            rounded-full
-            object-contain
-            w-44 h-44
-            sm:w-52 sm:h-52
-            md:w-60 md:h-60
-            lg:w-72 lg:h-72
-          "
-        />
+    flex items-center justify-center
+    rounded-[32px]
+    bg-black
+    p-4
+  "
+        >
+          <img
+            src={logo}
+            alt="Elite Engineering Works"
+            className="
+      object-contain
+      w-50 h-50
+      sm:w-52 sm:h-52
+      md:w-60 md:h-60
+      lg:w-72 lg:h-72
+    "
+          />
+        </div>
       </motion.div>
     </motion.div>
   );

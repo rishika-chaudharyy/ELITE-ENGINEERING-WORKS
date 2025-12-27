@@ -1,6 +1,6 @@
 import React from "react";
 import StatsCounter from "../components/StatsCounter";
-const CraneServices = () => {
+const Applications = () => {
   return (
     <div>
       <StatsCounter />
@@ -15,4 +15,4 @@ const CraneServices = () => {
   );
 };
 
-export default CraneServices;
+export default Applications;

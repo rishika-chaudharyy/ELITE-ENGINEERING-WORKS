@@ -13,24 +13,11 @@ import CraneServices from "./CraneServices";
 import Applications from "./Applications";
 import Contact from "./Contact";
 
-// ----------------------------------
-const colors = ["#38bdf8", "#22d3ee", "#a855f7", "#ec4899"];
-
-const particles = Array.from({ length: 20 }).map(() => ({
-  size: Math.random() * 6 + 4,
-  color: colors[Math.floor(Math.random() * colors.length)],
-  top: Math.random() * 100,
-  left: Math.random() * 100,
-  x: Math.random() * 200 - 100,
-  y: Math.random() * 200 - 100,
-  duration: Math.random() * 15 + 10,
-}));
-
-import left1 from "../assets/left1.jpg";
-import left2 from "../assets/left2.jpg";
-import c1 from "../assets/c1.jpeg";
-import c2 from "../assets/c2.jpeg";
-import c3 from "../assets/c3.jpeg";
+import c3 from "../assets/c3.jpg";
+import c4 from "../assets/c4.jpg";
+import c5 from "../assets/c5.jpg";
+import c2 from "../assets/c2.jpg";
+import c1 from "../assets/c1.jpg";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -81,34 +68,6 @@ export default function Home() {
 
   return (
     <div className="relative w-full bg-black text-white overflow-x-hidden">
-      {/* PARTICLES */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        {particles.map((p, i) => (
-          <motion.span
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: p.size,
-              height: p.size,
-              backgroundColor: p.color,
-              top: `${p.top}%`,
-              left: `${p.left}%`,
-              boxShadow: `0 0 10px ${p.color}`,
-            }}
-            animate={{
-              x: [0, p.x],
-              y: [0, p.y],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: p.duration,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          />
-        ))}
-      </div>
-
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 z-50 w-full bg-black shadow-[0_4px_20px_rgba(56,189,248,0.7)]">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-10 h-20">
@@ -138,23 +97,18 @@ export default function Home() {
             ))}
           </ul>
 
-          {/* 🔥 MOBILE MENU BUTTON WITH MOVING STEEL BORDER */}
-          {/* 🔥 MOBILE MENU BUTTON – STATIC ICON, MOVING SHINY BORDER */}
+          {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden relative w-12 h-12 rounded-lg border border-orange-400/40 overflow-hidden"
+            className="lg:hidden relative w-10 h-10 rounded-lg border border-blue-400/40 overflow-hidden"
           >
-            {/* SHINY MOVING LINE */}
             <motion.span
               className="absolute inset-0 rounded-lg"
               style={{
                 background:
-                  "linear-gradient(90deg, transparent, rgba(255,165,0,0.9), transparent)",
+                  "linear-gradient(90deg, transparent, rgba(56,189,248,0.6), transparent)",
               }}
-              animate={{
-                x: ["-100%", "100%"],
-                y: ["0%", "0%"],
-              }}
+              animate={{ x: ["-100%", "100%"] }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
@@ -162,7 +116,6 @@ export default function Home() {
               }}
             />
 
-            {/* ICON (STATIC) */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full">
               <div
                 className={`h-0.5 w-6 bg-white mb-1 transition ${
@@ -212,7 +165,7 @@ export default function Home() {
 
       {/* SECTIONS */}
       <section id="home" className="scroll-mt-20 pt-20 relative z-10">
-        <Hero images={[left1, left2, c1, c2, c3]} />
+        <Hero images={[c1, c2, c3, c4, c5]} />
         <StatsCounter />
       </section>
 

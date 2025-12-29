@@ -10,7 +10,6 @@ import StatsCounter from "../components/StatsCounter";
 import AboutUs from "./AboutUs";
 import Products from "./Products";
 import CraneServices from "./CraneServices";
-import Applications from "./Applications";
 import Contact from "./Contact";
 
 import c3 from "../assets/c3.jpg";
@@ -28,7 +27,6 @@ export default function Home() {
     { name: "About Us", id: "about" },
     { name: "Products", id: "products" },
     { name: "Crane Services", id: "crane" },
-    { name: "Applications", id: "applications" },
     { name: "Contact Us", id: "contact" },
   ];
 
@@ -178,9 +176,7 @@ export default function Home() {
       <section id="crane">
         <CraneServices />
       </section>
-      <section id="applications">
-        <Applications />
-      </section>
+
       <section id="contact">
         <Contact />
       </section>

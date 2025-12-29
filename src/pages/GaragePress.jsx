@@ -165,7 +165,7 @@ const GaragePress = ({ onBack }) => {
           <br />
           Near Palm Hotel, S.P. Ring Road,
           <br />
-          Odhav, Ahmedabad – 382415
+          Odhav, Ahmedabad , Gujarat – 382415
           <br />
           <span className="text-sky-400">GSTIN: 24AATPC6030H1ZW</span>
         </p>

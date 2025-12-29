@@ -129,16 +129,7 @@ const Contact = () => {
 
       {/* ===============================
           GOOGLE MAP
-         =============================== */}
-      <div className="max-w-6xl mx-auto mt-24">
-        <iframe
-          title="Elite Engineering Works Location"
-          src="https://www.google.com/maps?q=Odhav%20Ahmedabad&output=embed"
-          className="w-full h-[320px] rounded-2xl border border-white/10"
-          loading="lazy"
-        />
-      </div>
-
+     
       {/* ===============================
           FOOTER
          =============================== */}
